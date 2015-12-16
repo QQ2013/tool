@@ -1,0 +1,9 @@
+#!/bin/sh
+#1.cpp
+gcc -E hello.c -o hello.i
+#2.ccl
+gcc -S hello.i -o hello.s
+#3.as
+gcc -c hello.s -o hello.o
+#4.ld
+gcc hello.o -o hello

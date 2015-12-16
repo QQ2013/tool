@@ -1,0 +1,93 @@
+###################################################################################
+install:https://help.github.com/articles/set-up-git/#platform-linux
+ssh connect:https://help.github.com/articles/generating-ssh-keys/
+    ssh -T git@github.com 
+
+create repo:
+    echo # hello_word >> README.md
+	git init
+	git add README.md
+	git commit -m "first commit"
+	git remote add origin https://github.com/QQ2013/hello_word.git
+	git push -u origin master
+
+	git remote add origin https://github.com/QQ2013/hello_word.git
+    git push -u origin master
+config:
+    git config --global user.name "your name"
+    git config --global user.email "your email"
+
+###################################################################################
+0.work well change .git 
+	url = https://QQ2013@github.com/QQ2013/hello_word.git
+
+###################################################################################
+1.normal 
+step 1:
+    git init                                                         :init the git enviroment
+step 2:
+	git remote add origin https://github.com/QQ2013/hello_word.git   :set the origin 
+step 3:
+    git add README.md                                                :add file
+step 4:
+    git commit -m "first commit"                                     :commit
+step 5:
+    git push origin master                                           :syn chro with remote
+	git push -u origin master
+
+###################################################################################
+2.add a branch
+setp 1:create a new branch
+    git branch test1
+	git branch : view local
+	git branch -r : view remote
+	git branch -a : view all
+step 2:synchro with remote
+    git push origin test1
+2.1 del a local branch
+    git branch -d xxxxx      local
+	git push origin  :test1  remote
+2.2 merge a branch
+    git merge branch_name
+	after merge you can del local and remote branch
+2.2 rename a branch 
+    git branch -m test1 test2 local
+	git push origin test2:test1
+2.3 fetch remote branch
+    git checkout -b local-branch-name origin/remote-branch-name
+
+###################################################################################
+3.view remote origin
+    git remote -v
+
+###################################################################################
+4.git clone
+    git clone https://github.com/QQ2013/xxx.git
+    git clone -b test1 https://github.com/QQ2013/xxx.git
+
+###################################################################################
+5.git reset
+    make repo bact commits select
+    git reset commits
+
+###################################################################################
+6.git rebase
+   error: you need to resolve your current index first res:git reset --merge
+   error: fast***                                         :git push -f
+6.1 change commits
+    git rebase -i hards
+	http://blog.chinaunix.net/uid-27714502-id-3436706.html
+
+###################################################################################
+7.git trees
+    git log --graph --decorate --all
+
+###################################################################################
+8.log diff
+    git diff HEAD HEAD~1 
+	you can change the diff too such as vimdiff
+
+###################################################################################
+info
+1.http://www.jb51.net/article/55442.htm:git commands
+2.http://www.v2ex.com/t/84206          :git show git trees

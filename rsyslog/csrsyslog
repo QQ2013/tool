@@ -1,0 +1,31 @@
+logserver:
+open tcp and udp for log in
+
+logclient:
+udp:user.*                                                  @123.56.161.71:514
+tcp:user.*                                                  @@123.56.161.71:514
+
+sendlogger:
+logger -p user.notice -t test "zjh" 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+logclient:http://linux.cn/article-4835-1.html
+logserver:https://linux.cn/article-5023-1.html
+all:http://www.2cto.com/os/201406/308601.html

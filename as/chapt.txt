@@ -1,0 +1,37 @@
+3-------
+   cpuid    获取cpuid
+5-------
+   sizetest 测试内存的分配,.fill不工作
+   movetest--------传输指令例程
+       bubble      冒泡排序法
+	   cmovtest    条件传输指令:获取数组最大值
+	   movtest     c语言测试例程:循环输出数组
+	   movtest1    mov简单测试例程
+	   movtest2    mov简单测试
+	   movtest3    mov循环输出数组:使用变值的内存位置 base(offset,%edi,4)
+	   movtest4    mov循环输出数组:使用寄存器间寻址 4(%edi)
+6-------
+    ifthen  分支例程
+	for     C语言for程序,查看for是怎么实现的
+	loop    循序例程
+	betterloop  loop灾难:ecx初始化为0并不能自动出循环需要测试jcxz命令
+    calltest    call测试
+7-------
+    inttest 测试有符号整数
+	movzxtest  将短数据传送给长寄存器,且将其他位置为0
+	movsxtest  将短数据传送给长寄存器,且保持符号
+	quadtest   quad 定义双字的整数
+	mmxtest    把双字和字节整数加载到mmx寄存器之中
+	ssetest    128位数据传送到SSE寄存器中
+    floattest  传送浮点数
+8------
+    addtest1.s add命令测试
+	addtest3.s 检测无符号整数加法中的进位
+	addtest4.s 检测带符号加法中使用溢出标志检测错误
+12-----
+    syscalltest1.s 系统调用示例输出字符串
+    syscalltest2.s 系统调用返回值输出进程号
+	syscalltest3.s 复杂系统调用获取系统信息
+	naotest.s      维持后台运行，系统调用跟踪
+	cfunctest.s    C语言函数调用功能
+

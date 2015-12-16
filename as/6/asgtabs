@@ -1,0 +1,1 @@
+as -gtabs -o calltest.o calltest.s

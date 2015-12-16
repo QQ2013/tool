@@ -1,0 +1,1 @@
+as -gtabs -o floattest.o floattest.s
