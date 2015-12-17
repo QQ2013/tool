@@ -1,0 +1,75 @@
+gdb命令
+1.启动和退出
+(1)启动
+    若要使用gdb需要在预处理时加入-g(gcc),-gtabs(as)选项
+    #gdb test
+
+    #gdb -q
+	   $file test
+	run
+	continue
+(2)退出
+    #quit
+2.显示和查找程序源代码
+    list:显示10行代码，若再运行该命令则显示接下来的10行命令
+	list 5，10：显示第5行到第10行的代码
+	list
+	teat.c:5,10:显示源文件test.c中的第5行至第10行代码,在调试含有多个源文件的程序时使用
+	list get_sum:显示 get_sum函数调用周围的代码
+	list
+	test.c:get_sum:显示源文件test.c中get_sum函数周围的代码,在调试含有多个源文件的程序时使用
+3.设置和管理断点
+(1)以行号设置断点
+    break 7
+	run
+(2)以函数名设置断点
+    break get_sum
+	run
+(3)以条件表达式设置断点
+    break 行号或函数名 if 条件
+	break 7 if i==9
+	run
+
+    watch 条件表达式 :以表达式设置断点方法，这种设置方式不需要指定行号或函数,而是在整个过程运行中档条件表达式的值发生改变时程序就会暂停下来
+4.查看当前设置的中断点
+    info breakpoints
+5.使中断失效或有效
+    info breakpoints查看断点编号
+	disable 2
+	enable 2
+6.删除断点
+    clear:删除程序中所有的断点
+	clear 行号:删除此行的断点
+	clear 函数名:删除该函数的断点
+	delete
+	断点编号:删除指定编号的断点.如果一次要删除多个断点,各个断点编号以空格隔开
+查看和设置变量的值
+1.print命令
+    print 变量或表达式:打印变量或表达式当前的值
+    print 变量=值:对变量进行复制
+    print 表达式@要打印的值的个数n
+2.watchis 命令
+    watchis 变量或表达
+	watchis sum+0.5 >> double
+3.set命令
+    set variable 变量=值
+控制程序的执行
+1.continue命令
+2.kill命令
+3.next和step命令
+    如果遇到函数调用,next会把函该函数调用当作一掉语句执行,再次输入next会执行函数调用后的语句;而step则会跟踪进入函数,一次一条地执行函数内的代码,直到函数内的代码执行完,才执行函数调用后的语句,
+4.nexti和stepi命令
+    单步执行一条机器指令,而不是一条语句
+查看数据
+1.info registers显示所有寄存器值
+
+2.print 显示特定寄存器或者来自程序的变量值
+    print/x:显示十进制值
+	print/t:显示二进制值
+	peint/x:显示十六进制
+3.x 显示特定内存位置的值
+    x/nyz
+	n显示的字段数
+	y是输出格式:c字符,d十进制,x十六进制
+	z是要显示的字段长度:b字节,h16位字,w32位字,g双字
+	x/42cb

@@ -1,6 +1,8 @@
-本项目包含各种操作技能主要内容分为以下几大类:
-1.linux基础命令--command
+本项目为常用命令和工具使用说明
 
-2.linux工具使用--tool
-
-3.linux编程--code
+工具类：
+1.gcc
+2.gdb
+3.git
+4.rsyslog
+5.yum
