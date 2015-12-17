@@ -1,2 +1,0 @@
-#!/bin/sh
-grep up $1| awk {'print $1'}

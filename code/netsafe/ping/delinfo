@@ -1,6 +1,0 @@
-1.use g command
-:g/^\/\*/d del line start /*
-:g!/^\/\*/d del line not start /*
-
-2.use sed command
-:1,227 s/^\/\*.*$//g replace all line start /* with /
