@@ -17,6 +17,17 @@ config:
     git config --global user.name "your name"
     git config --global user.email "your email"
 
+
+###################################################################################
+-1 ssh connect
+  (1)create ssh-key
+      ssh-keygen -t rsa -b 4096 -C "371499961@qq.com"
+	  passphrase:791818zhu
+  (2)local add ssh-key
+      ssh-agent bash
+      eval "$(ssh-agent -s)"
+      ssh-add ~/.ssh/id_rsa
+  (3)remote add ssh-keyid_rsa.pub
 ###################################################################################
 0.work well change .git 
 	url = https://QQ2013@github.com/QQ2013/hello_word.git
