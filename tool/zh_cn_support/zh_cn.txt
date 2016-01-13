@@ -1,0 +1,24 @@
+1.参考
+http://www.jb51.net/os/RedHat/131936.html
+
+2.安装中文支持包
+yum groupinstall chinese-support
+
+3.配置并重新启动
+vim /etc/sysconfig/i18n
+
+LANG=”zh_CN.GB18030″
+SUPPORTED=”zh_CN.UTF-8:zh_CN:zh:en_US.UTF-8:en_US:en”
+SYSFONT=”latarcyrheb-sun16″
+
+4.vim 配置
+vim /etc/vimrc
+
+set fileencoding=utf-8
+set fileencodings=utf-8,gb18030,gbk,big5
+
+3.Xshell配置
+bash配置:export LANG=zh_CN.GBK
+
+编码选择:Chinese Simple GBK
+
