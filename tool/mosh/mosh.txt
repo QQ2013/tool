@@ -1,0 +1,12 @@
+参考网址:
+epel安装://linux.cn/article-2324-1.html
+mosh安装:https://linux.cn/article-6262-1-rel.html
+无法发现启动消息处理:http://blog.chinaunix.net/xmlrpc.php?r=blog/article&uid=8747186&id=4212689
+
+epel安装:
+wget http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+rpm -ivh epel-release-6-8.noarch.rpm
+yum repolist 会发现epel项目
+
+注意:
+需要使客户端和服务端LC一致
