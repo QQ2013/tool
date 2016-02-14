@@ -1,0 +1,6 @@
+1.vim /etc/sysconfig/i18n
+    LANG="en_US.UTF_8"
+    SUPPORTED="zh_CN.UTF-8:zh_CN:zh"
+    SYSFONT="latarcyrheb-sun16"
+2.xshell设置为UTF-8
+3./usr/bin/convmv -f gbk -t utf-8 -r --notest /home/wwwroot转换windows下上传文件
