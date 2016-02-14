@@ -4,3 +4,5 @@
     SYSFONT="latarcyrheb-sun16"
 2.xshell设置为UTF-8
 3./usr/bin/convmv -f gbk -t utf-8 -r --notest /home/wwwroot转换windows下上传文件
+4.文件编码转换iconv
+5.文件测试file
